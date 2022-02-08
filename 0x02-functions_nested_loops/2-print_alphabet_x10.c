@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-* print_alphabet - writes a string to stdout
+* print_alphabet_x10 - writes a string to stdout
 *
 * Description: Output: abcdefghijklmnopqrstuvwxyz
 *
