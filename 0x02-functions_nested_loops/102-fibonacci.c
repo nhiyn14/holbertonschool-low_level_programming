@@ -3,9 +3,6 @@
 
 /**
   * main - prints the first 50 Fibonacci numbers, starting with 1 and 2 \n
-  * @a: 1st number to create next Fibonacci number
-  * @b: 2nd number to create next Fibonacci number
-  * @c: count the number of addition (wanted: 50)
   * Return: 0
   */
 int main(void)
