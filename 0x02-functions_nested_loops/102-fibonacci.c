@@ -15,16 +15,16 @@ int main(void)
 	double c = 0;
 
 	printf("%.0f, %.0f, ", a, b);
-	while (c < 50)
+	while (c < 48)
 	{
 		a = a + b;
 		printf("%.0f", a);
-		if (c < 49)
+		if (c < 47)
 		printf(", ");
 		c++;
 		b = a + b;
 		printf("%.0f", b);
-		if (c < 49)
+		if (c < 47)
 		printf(", ");
 		c++;
 	}
