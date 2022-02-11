@@ -5,6 +5,7 @@
   * Descrition: multiples of three print Fizz
   * multiples of five print Buzz
   * multiples of both three and five print FizzBuzz.
+  * return: void
   */
 int main(void)
 {
@@ -16,16 +17,18 @@ int main(void)
 		c = a % 5;
 
 		if ((b == 0) && (c != 0))
-			printf("Fizz ");
+			printf("Fizz");
 		else if ((c == 0) && (b != 0))
-			printf("Buzz ");
+			printf("Buzz");
 		else if ((c == 0) && (b == 0))
-			printf("FizzBuzz ");
-		else if (a < 100)
-			printf("%i ", a);
-		else if (a == 100)
+			printf("FizzBuzz");
+		else
 			printf("%i", a);
+
+		if (a < 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	printf("\n");
 	return (0);
 }
