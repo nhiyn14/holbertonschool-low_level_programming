@@ -35,6 +35,6 @@ void print_square(int size)
 		_putchar('\n');
 		line++;
 	}
-	if (size == 0)
+	if (size <= 0)
 		_putchar('\n');
 }
