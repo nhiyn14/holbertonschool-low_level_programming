@@ -5,7 +5,7 @@
   * Descrition: multiples of three print Fizz
   * multiples of five print Buzz
   * multiples of both three and five print FizzBuzz.
-  * return: void
+  * Return: void
   */
 int main(void)
 {
