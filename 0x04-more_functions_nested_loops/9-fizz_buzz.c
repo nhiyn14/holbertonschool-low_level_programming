@@ -6,7 +6,7 @@
   * multiples of five print Buzz
   * multiples of both three and five print FizzBuzz.
   */
-void main(void)
+int main(void)
 {
 	int a, b, c;
 
@@ -21,8 +21,11 @@ void main(void)
 			printf("Buzz ");
 		else if ((c == 0) && (b == 0))
 			printf("FizzBuzz ");
-		else
+		else if (a < 100)
 			printf("%i ", a);
+		else if (a == 100)
+			printf("%i", a);
 	}
-	putchar('\n');
+	printf("\n");
+	return (0);
 }
