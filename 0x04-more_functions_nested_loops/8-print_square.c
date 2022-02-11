@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- * print_square - prints a square \n
  * print_hash_line - prints a line of c character size time
- *
  * @size: size of the square
  * @c: character to be printed
  * Description: output:
@@ -23,6 +21,10 @@ void print_hash_line(int size, int c)
 	}
 }
 
+/**
+ * print_square - prints a square \n
+ * @size: size of the square
+ */
 void print_square(int size)
 {
 	int line = 1;
@@ -33,4 +35,6 @@ void print_square(int size)
 		_putchar('\n');
 		line++;
 	}
+	if (size == 0)
+		_putchar('\n');
 }
