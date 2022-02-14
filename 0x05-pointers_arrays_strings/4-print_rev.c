@@ -6,7 +6,7 @@
  *
  *
  * Description: output: str = "Hello"
- * _puts(str) => Stdout: Hello
+ * => Stdout: Hello
  *
  * Return: 0
  */
