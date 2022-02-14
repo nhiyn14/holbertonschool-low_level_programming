@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _puts - rints a string \n to stdout.
- * @str: pointer string str (set to int a)
+ * _puts - prints a string \n to stdout.
+ * @str: pointer string str (set to int str)
  *
  *
  * Description: output: str = "Hello"
