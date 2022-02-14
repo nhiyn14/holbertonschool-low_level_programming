@@ -12,7 +12,7 @@
  */
 void rev_string(char *s)
 {
-	int len= _strlen(s);
+	int len = _strlen(s);
 	int pre = 0;
 	int tempo;
 
