@@ -12,13 +12,15 @@
  */
 void rev_string(char *s)
 {
+	int len= _strlen(s);
 	int pre = 0;
-	int post = _strlen(s) - 1;
+	int tempo;
 
-	while (s[pre] != '\0')
+	while (pre < len / 2)
 	{
-		s[pre] = s[post];
-		post--;
+		tempo = s[pre];
+		s[pre] = s[len - 1 - pre];
+		s[len - 1 - pre] = tempo;
 		pre++;
 	}
 }
