@@ -7,7 +7,7 @@
  * @s1: pointer to s1 (1st compare var)
  * @s2: pointer to s2 (2nd compare var)
  *
- * Description: if s1[] = "Hello"; s2[] = "World!";
+ * Description: if s1[] = "Hello", s2[] = "World!";
  * => _strcmp(s1, s2)) == -15
  * => _strcmp(s2, s1)) == 15
  * => _strcmp(s1, s1)) == 0
@@ -26,12 +26,10 @@ int _strcmp(char *s1, char *s2)
 	}
 	else
 	{
-		if (s1[0] > s2[0])
-			return ((s1[0]-s2[0]);
-		else if (s1[0] < s2[0])
-			return (-(s2[0] - s1[0]);
+		while (s1[i] == s2[i])
+			i++;
+		return (s1[i] - s2[i]);
 	}
-
 }
 
 /**
