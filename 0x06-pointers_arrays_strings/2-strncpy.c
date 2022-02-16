@@ -34,7 +34,7 @@ char *_strncpy(char *dest, char *src, int n)
 			dest[start] = src[start];
 			start++;
 		}
-		while (start >= endSrc && start <n)
+		while (start >= endSrc && start < (n - 1))
 		{
 			dest[start] = 0;
 			start++;
