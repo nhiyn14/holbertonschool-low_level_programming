@@ -13,10 +13,10 @@
  */
 char *leet(char *s)
 {
-	int i = 0;
+	int i = 0; /** no. og element for s */
 	char *pre = "aAeEoOtTlL";
 	char *post = "4433007711";
-	int a = 0;
+	int a = 0; /** no. of element for pre + post */
 
 	while (s[i] != '\0')
 	{
