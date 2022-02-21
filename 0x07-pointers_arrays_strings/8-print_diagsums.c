@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 	int element;
 
 	for (i = 0; i < size; i++)
-	{		
+	{
 		element = (size + 1) * i;
 		total1 = total1 + *(a + element);
 	}
