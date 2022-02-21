@@ -1,0 +1,2 @@
+0x07-pointers_arrays_strings directory was created for project 0x07-pointers_arrays_strings
+Holberton School
