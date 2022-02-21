@@ -22,6 +22,7 @@ char *_strchr(char *s, char c)
 			if (s[i] == c)
 			{
 				s = &s[i];
+				break;
 			}
 			else
 				i++;
