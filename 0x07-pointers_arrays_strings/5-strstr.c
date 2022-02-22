@@ -20,6 +20,10 @@ char *_strstr(char *haystack, char *needle)
 	int hayLen = _strlen(haystack);
 	int neeLen = _strlen(needle);
 
+	if (*needle == '\0')
+	{
+		return (haystack);
+	}
 	for (i = 0; i < hayLen; i++)
 	{
 		temp = i;
