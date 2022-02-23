@@ -7,6 +7,7 @@
  *
  * Description: if x = -5 and y = 3
  * stdout = -125
+ * Similar to function pow in math.h
  *
  * Return: if y >= print x raised to the power of y
  * if y < 0 print -1 to indicate an error
