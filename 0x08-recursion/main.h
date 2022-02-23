@@ -13,5 +13,8 @@ int _sqrt_recursion(int n);
 int _manualSquareCheck(int x, int n);
 int is_prime_number(int n);
 int _manualProductCheck(int x, int n);
+int is_palindrome(char *s);
+int _checkMirrorletter(char *s, int mid, int mir1, int mir2);
+int _strlen(char *s);
 
 #endif /* MAIN_H */
