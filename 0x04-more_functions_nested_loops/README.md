@@ -1,5 +1,6 @@
-0x04-more_functions_nested_loops directory was created for 0x04. C - More functions, more nested loops.
-Holberton Week2day4
+0x04-more_functions_nested_loops directory was created 
+for 0x04. C - More functions, more nested loops.
+Holberton School Aus
 
 0-isupper.c
 	int _isupper(int c); checks for uppercase character
