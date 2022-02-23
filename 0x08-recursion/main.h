@@ -15,6 +15,6 @@ int is_prime_number(int n);
 int _manualProductCheck(int x, int n);
 int is_palindrome(char *s);
 int _checkMirrorletter(char *s, int mid, int mir1, int mir2);
-int _strlen(char *s);
+int _strlen(char *s, int count);
 
 #endif /* MAIN_H */

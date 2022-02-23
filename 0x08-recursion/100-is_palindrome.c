@@ -12,9 +12,10 @@
  */
 int is_palindrome(char *s)
 {
-	int mid = _strlen(s) / 2;
+	int count = 0;
+	int mid = _strlen(s, count) / 2;
 	int mir1 = 0;
-	int mir2 = _strlen(s) - 1;
+	int mir2 = _strlen(s, count) - 1;
 
 	if (*(s + 0) == '\0')
 		return (1);
@@ -52,21 +53,17 @@ int _checkMirrorletter(char *s, int mid, int mir1, int mir2)
 /**
  * _strlen - returns the length of a string.
  * @s: pointer s (set to int a)
- *
+ * @count: count length of string
  *
  * Description: output: str = Hello
  * _strlen(str) = 5
  *
  * Return: Length
  */
-int _strlen(char *s)
+int _strlen(char *s, int count)
 {
-	int count = 0;
-
-	while (*s != '\0')
-	{
-		count++;
-		s++;
-	}
-	return (count);
+	if (*s != '\0')
+		return (_strlen(s + 1, count + 1));
+	else
+		return (count);
 }
