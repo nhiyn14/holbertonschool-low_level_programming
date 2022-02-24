@@ -33,13 +33,9 @@ int is_prime_number(int n)
  */
 int _manualProductCheck(int x, int n)
 {
-		if (n % x != 0)
-		{
-			if (x == 13)
-				return (1);
-			else
-				return (_manualProductCheck(x + 1, n));
-		}
-		else
-			return (0);
+	if (n == x)
+		return (1);
+	if (n % x == 0)
+		return (0);
+	return (_manualProductCheck(x + 1, n));
 }
