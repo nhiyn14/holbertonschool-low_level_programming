@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-int _putchar(char c);
+int isAllDigit(char *c);
 
 #endif /* MAIN_H */
