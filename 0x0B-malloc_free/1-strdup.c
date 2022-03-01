@@ -15,7 +15,7 @@
 char *_strdup(char *str)
 {
 	char *arrayChar;
-	char size = _strlen(str);
+	char size = _strlen(str) - 1;
 	int i = 0; /*place holder of arrayChar*/
 
 	arrayChar = malloc(sizeof(char) * size);
@@ -27,7 +27,7 @@ char *_strdup(char *str)
 		i = i + 1;
 	}
 	return (arrayChar);
-	free(arrayChar);
+	free (arrayChar);
 }
 
 /**
