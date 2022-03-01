@@ -19,26 +19,56 @@ char *str_concat(char *s1, char *s2)
 	int i = 0; /*place holder of concat*/
 	int a = 0; /*place holder of s2*/
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL && s1 != NULL)
+		s2 = "";
 	sizeS1 = _strlen(s1);
 	sizeS2 = _strlen(s2) + 1; /* +1 to include \0 */
 	sizeCon = sizeS1 + sizeS2;
 	concat = malloc(sizeCon);
 	if (concat == NULL)
 		return (NULL);
-	while (i < sizeS1)
-	{
+	for (i = 0; i < sizeS1; i++)
 		*(concat + i) = *(s1 + i);
-		i = i + 1;
-	}
-	while (i < sizeCon)
+	for (i = sizeS1; i < sizeCon; i++)
 	{
 		*(concat + i) = *(s2 + a);
-		i++;
 		a++;
 	}
 	return (concat);
+}
+
+/**
+  * *_strdup- returns a pointer to a newly allocated space in memory,
+  * which contains a copy of the string given as a parameter.
+  * @str: given string
+  *
+  * Description: Similar to function strdup
+  *
+  * Return: if succeed, return pointer to the duplicate of str
+  * NULL if str == NULL or insufficient memory was available
+  */
+char *_strdup(char *str)
+{
+	char *arrayChar;
+	int size; /* +1 for \0 */
+	int i = 0; /*place holder of arrayChar*/
+
+	if (str == NULL)
+		return (NULL);
+	size = _strlen(str) + 1;
+	arrayChar = malloc(size);
+	if (arrayChar == NULL)
+		return (NULL);
+	while (i < size)
+	{
+		*(arrayChar + i) = *(str + i);
+		i = i + 1;
+	}
+	return (arrayChar);
 }
 
 /**
