@@ -15,11 +15,13 @@
 char *_strdup(char *str)
 {
 	char *arrayChar;
-	char size = _strlen(str);
+	char size = _strlen(str) + 1; /* +1 for \0 */
 	int i = 0; /*place holder of arrayChar*/
 
-	arrayChar = malloc(sizeof(char) * (size + 1));
 	if (str == NULL)
+		return (NULL);
+	arrayChar = malloc(size);
+	if (arrayChar == NULL)
 		return (NULL);
 	while (i < size)
 	{
@@ -27,7 +29,6 @@ char *_strdup(char *str)
 		i = i + 1;
 	}
 	return (arrayChar);
-	free(arrayChar);
 }
 
 /**
