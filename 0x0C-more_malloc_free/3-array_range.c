@@ -29,7 +29,10 @@ int *array_range(int min, int max)
 		free(arrInt);
 		return (NULL);
 	}
-	for (i = min; i < gap; i++)
-		*(arrInt + i) = i;
+	for (i = 0; i < gap; i++)
+	{
+		*(arrInt + i) = min;
+		min++;
+	}
 	return (arrInt);
 }
