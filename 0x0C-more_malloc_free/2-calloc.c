@@ -20,7 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char *calloc;
 	unsigned int i = 0; /*place holder of calloc*/
 
-	if (nmemb == 0 && size == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 	calloc = malloc(size * nmemb);
 	if (calloc == NULL)
