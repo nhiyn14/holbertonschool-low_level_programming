@@ -3,11 +3,11 @@
 
 /**
   * op_add - return sum
-  * a: int
-  * b: int
+  * @a: int
+  * @b: int
   * Description: sum of a and b
   * Return: a + b
-  */ 
+  */
 int op_add(int a, int b)
 {
 	return (a + b);
@@ -15,8 +15,8 @@ int op_add(int a, int b)
 
 /**
   * op_sub - return difference
-  * a: int
-  * b: int
+  * @a: int
+  * @b: int
   * Description: difference of a and b
   * Return: a - b
   */
@@ -27,8 +27,8 @@ int op_sub(int a, int b)
 
 /**
   * op_mul - returns the product
-  * a: int
-  * b: int
+  * @a: int
+  * @b: int
   * Description: product of a and b
   * Return: a * b
   */
@@ -39,8 +39,8 @@ int op_mul(int a, int b)
 
 /**
   * op_div - returns the result of the division
-  * a: int
-  * b: int
+  * @a: int
+  * @b: int
   * Description: div of a and b
   * Return: a / b
   */
@@ -56,8 +56,8 @@ int op_div(int a, int b)
 
 /**
   * op_mod - returns the remainder of the division
-  * a: int
-  * b: int
+  * @a: int
+  * @b: int
   * Description: remainder of a and b
   * Return: a % b
   */

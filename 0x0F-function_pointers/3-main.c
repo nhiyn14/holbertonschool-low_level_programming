@@ -3,6 +3,8 @@
 
 /**
   * main - a program that performs simple operations
+  * @argc: argument count
+  * @argv: array of pointers to arguments
   *
   * Return: Wrong number of arguments, print Error\n, exit 98
   * Operator not match, print Error\n, exit 99
@@ -23,16 +25,16 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
- 	if (get_op_func(argv[2]) == NULL)
+	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	func = get_op_func(argv[2]);
 	result = func(a, b);
 	printf("%d\n", result);
-	return(0);
+	return (0);
 }
