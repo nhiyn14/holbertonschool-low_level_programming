@@ -37,13 +37,9 @@ void print_all(const char * const format, ...)
 					break;
 				case 's':
 					str = va_arg(type, char *);
-					if (str != NULL || *(str + 0) != '\0')
-					{
-						printf("%s%s", separator, str);
-						separator = ", ";
-						break;
-					}
-					printf("(nil)");
+					if (str == NULL || *str == '\0')
+						str = "(nil)";
+					printf("%s%s", separator, str);
 					separator = ", ";
 					break;
 			}
