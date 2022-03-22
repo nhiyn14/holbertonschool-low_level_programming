@@ -26,10 +26,15 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		if (count == (index - 1))
 		{
-			tmp = deleteNode->next;
-			deleteNode->next = tmp->next;
-			free(tmp);
-			break;
+			if (deleteNode->next != NULL)
+			{
+				tmp = deleteNode->next;
+				deleteNode->next = tmp->next;
+				free(tmp);
+				break;
+			}
+			else
+				return (-1);
 		}
 		deleteNode = deleteNode->next;
 		count++;
