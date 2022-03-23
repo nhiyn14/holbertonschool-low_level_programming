@@ -31,7 +31,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 				tmp = deleteNode->next;
 				deleteNode->next = tmp->next;
 				free(tmp);
-				break;
+				return (1);
 			}
 			else
 				return (-1);
@@ -39,7 +39,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		deleteNode = deleteNode->next;
 		count++;
 	}
-	if (index != (count - 1))
-		return (-1);
-	return (1);
+	return (-1);
 }
