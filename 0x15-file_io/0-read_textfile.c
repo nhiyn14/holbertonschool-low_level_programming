@@ -21,16 +21,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!filename)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
-	buf = malloc(sizeof(*buf) * letters);
-	if (!buf)
-	{
-		free(buf);
-		return(-1);
-	}
-	cnt = read(fd,buf,letters);
-	write(STDOUT_FILENO, buf, cnt);
+	fd = open(filename, O_RDONLY);/*open filename to fd*/
+	if (fd == -1)/* open return -1 == error */
+		return (0);
+
+	buf = malloc(sizeof(char) * letters);/*create buffer*/
+	if (buf == NULL)
+		return (0);
+
+	cnt = read(fd, buf, letters); /*'read' filename into buf*/
+	write(STDOUT_FILENO, buf, cnt); /*'write' buf to stdout*/
 
 	free(buf);
-	return (cnt);
+	return (cnt); /*numbers of letters it could read*/
 }
