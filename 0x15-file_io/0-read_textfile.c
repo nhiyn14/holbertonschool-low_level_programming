@@ -32,6 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	cnt = read(fd, buf, letters); /*'read' filename into buf*/
 	write(STDOUT_FILENO, buf, cnt); /*'write' buf to stdout*/
 
+	close(fd);/*close fd after used*/
 	free(buf);
 	return (cnt); /*numbers of letters it could read*/
 }
