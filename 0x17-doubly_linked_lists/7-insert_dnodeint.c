@@ -15,7 +15,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *current, *new;
 	unsigned int i;
 
-	if (h == NULL)/*no address for DLL*/
+	if (h == NULL || n == '\0')/*no address for DLL*/
 		return (0);
 	current = *h;
 	if (current == NULL && idx > 0)/*fail*/
@@ -33,7 +33,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->n = n;
 
 	for (i = 0; current != NULL && i <= idx - 1; i++)
-	{		
+	{
 		if (i == idx - 1)
 		{
 			new->next = current->next;
