@@ -1,0 +1,37 @@
+#The compiler: gcc for C program
+CC = gcc
+
+#The source .c file
+SRC = main.c school.c
+
+#The object .o file
+OBJ = $(SRC:.c=.o)
+
+#The executable file
+NAME = school
+
+#The program to delete files
+RM = rm -f
+
+#compiler flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+#Create an executable file named 'school'
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+#Deletes all temporary files along with the executable
+clean:
+	$(RM) *~ $(NAME)
+
+#Deletes the object files
+oclean:
+	$(RM) $(OBJ)
+
+#Deletes all temporary files, the executable, and the object files
+fclean:
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
+
+#forces recompilation of all source files
+re: oclean all

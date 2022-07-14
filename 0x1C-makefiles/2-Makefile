@@ -1,0 +1,15 @@
+#The compiler: gcc for C program
+CC = gcc
+
+#The source .c file
+SRC = main.c school.c
+
+#The object .o file
+OBJ = $(SRC:.c=.o)
+
+#The executable file
+NAME = school
+
+#Create an executable file named 'school'
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)

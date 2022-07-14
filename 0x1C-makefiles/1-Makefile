@@ -1,0 +1,9 @@
+#The compiler: gcc for C program
+CC = gcc
+
+#The source .c file
+SRC = main.c school.c
+
+#Create an executable file named 'school'
+all:
+	$(CC) $(SRC) -o school
