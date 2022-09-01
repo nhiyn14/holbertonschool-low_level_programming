@@ -15,4 +15,13 @@ void print_array(int *array, size_t size);
 
 /* recursive search binary */
 int binary_search_recursive(int *array, int left, int right, int value);
+
+/* jump search algorithm */
+int jump_search(int *array, size_t size, int value);
+
+/* interpolation search algorithm */
+int interpolation_search(int *array, size_t size, int value);
+
+/* advanced binary search algorithm */
+int advanced_binary(int *array, size_t size, int value);
 #endif
